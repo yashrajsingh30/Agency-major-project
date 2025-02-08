@@ -17,7 +17,7 @@ html, body{
     position: fixed;
     z-index: 999;
     background-color: #0b0b0b;
-    padding: 25vh 10vw;
+    padding: 15vh 10vw;
 }
 .line{
     /* background-color: red; */
@@ -42,6 +42,14 @@ html, body{
     font-weight: 200;
     font-family: "silk serif";
 } 
+
+#line1-part1 h5{
+    width: 5vw;
+    /* background-color: red; */
+    text-align: right;
+
+}
+
 .line h1{
     font-size: 6.5vw;
     text-transform: uppercase;
@@ -49,15 +57,63 @@ html, body{
 }
 
 .line h2{
-    font-size: 6.5vw;
+    height: 8.6vw;
+    /* text-align: ;
+    background-color: aqua; */
+    font-size: 6.3vw;
     text-transform: uppercase;
     font-weight: 900;
+
+    animation-name: loader-anime;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+#wait{
+    margin-top: 10vh;
+    margin-left: 20vw;
+}
+
+@keyframes loader-anime {
+    0%{
+        opacity: 1;
+        font-family: "Plain light";
+        font-weight: 500;
+        color: #fff;
+    }
+
+    47%{
+        opacity: 0;
+        font-family: "Plain light";
+        font-weight: 500;
+        color: #fff;
+    }
+
+
+    50%{
+        opacity: 1;
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+    }
+
+    100%{
+        opacity: 0;
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+    }
+    
 }
 
 
 #main{
     position: relative;
-    background-color: #111;
+    background-color: #0b0b0b;
 }
 
 
