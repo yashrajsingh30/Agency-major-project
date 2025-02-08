@@ -20,14 +20,38 @@ html, body{
     padding: 25vh 10vw;
 }
 .line{
-    background-color: red;
+    /* background-color: red; */
     height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5vw;
 }
 
+#line1-part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+}
+
+
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 3vw;
+    font-weight: 200;
+    font-family: "silk serif";
+} 
 .line h1{
     font-size: 6.5vw;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 800;
+}
+
+.line h2{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 
