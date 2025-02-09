@@ -63,15 +63,53 @@ function loadinganimation() {
   });
 }
 function cursorAnimation() {
-  document.addEventListener("mousemove", function (event) {
-    gsap.to("#crsr", {
-      left: event.x,
-      top: event.y,
-    });
-  });
+  //   document.addEventListener("mousemove", function (event) {
+  //     gsap.to("#crsr", {
+  //       left: event.x,
+  //       top: event.y,
+  //     });
+  //   });
 
   Shery.makeMagnet("#nav-part2 h4");
 }
 
+function contentHover() {
+    var hover1 = document.querySelector("#hover1");
+    var hover2 = document.querySelector("#hover2");
+    hover1.addEventListener("mouseenter", function () {
+      hover1.style.webkitTextStroke = "1px white";
+  
+      hover1.style.color = "transparent";
+      hover1.style.textDecoration = "none";
+  
+      hover1.style.transition = "cubic-bezier(0.19, 1, 0.22, 1) 0.4s";
+    });
+  
+    hover1.addEventListener("mouseleave", function () {
+      hover1.style.webkitTextStroke = "0px white";
+  
+      hover1.style.color = "#fff";
+      hover1.style.textDecoration = "underline";
+      hover1.style.transition = "cubic-bezier(0.19, 1, 0.22, 1) 0.4s";
+    });
+  
+    hover2.addEventListener("mouseenter", function () {
+      hover2.style.webkitTextStroke = "1px white";
+  
+      hover2.style.color = "transparent";
+      hover2.style.textDecoration = "none";
+      hover2.style.transition = "cubic-bezier(0.19, 1, 0.22, 1) 0.4s";
+    });
+  
+    hover2.addEventListener("mouseleave", function () {
+      hover2.style.webkitTextStroke = "0px white";
+      hover2.style.color = "#fff";
+      hover2.style.textDecoration = "underline";
+      hover2.style.transition = "cubic-bezier(0.19, 1, 0.22, 1) 0.4s";
+    });
+  }
+
 loadinganimation();
 cursorAnimation();
+contentHover();
+

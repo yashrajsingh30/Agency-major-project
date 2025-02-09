@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Plain light";
     color: #fff;
-    cursor: none;
+    /* cursor: none; */
 }
 
 html, body{
@@ -13,17 +13,17 @@ html, body{
 }
 
 
-#crsr{
+/* #crsr{
     width: 3vw;
     height: 3vw;
     border-radius: 50%;
     border: 1px solid #fff;
     background-color: transparent;
-    z-index: 9999;
+    z-index: 1; 
     position: fixed;
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
-}
+} */
 
 #loader{
     height:100%;
@@ -172,16 +172,24 @@ html, body{
     margin-left: 28%;
     height: fit-content;
     overflow: hidden;
+    display: flex;
 }
 
 .center h2{
-
+    text-align: left;
     font-size: 13vh;
     line-height: 14vh;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
+    z-index:0;
+}
+
+
+#hover1, #hover2{
+    text-decoration: underline;
 }
 
 .center:nth-child(2){
     margin-top: 6vh;
 }
+
