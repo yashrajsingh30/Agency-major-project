@@ -122,3 +122,44 @@ html, body{
     height: 100vh;
     background-color: #151515;
 }
+
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vh 6vw;
+}
+
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+
+}
+
+#nav-part2 h4{
+    font-size: 3vh;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.center{
+    /* background-color: red; */
+    width: 70%;
+    margin-left: 28%;
+}
+
+.center h2{
+
+    font-size: 13vh;
+    line-height: 14vh;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.center:nth-child(2){
+    margin-top: 6vh;
+}
