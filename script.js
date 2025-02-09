@@ -43,25 +43,35 @@ function loadinganimation() {
   tl.from("#page1", {
     delay: 0.4,
     y: 1600,
+    duration: 0.5,
     ease: "power1.inOut",
   });
 
   tl.to("#loader", {
     display: "none",
   });
-}
-function cursorAnimation(){
-    document.addEventListener("mousemove", function(event){
-        gsap.to("#crsr", {
-            left: event.x,
-            top: event.y
-        })
-    })
-    
-    Shery.makeMagnet("#nav-part2 h4");
-}
 
+  tl.from("#nav ", {
+    opacity: 0,
+  });
+
+  tl.from(".center h2", {
+    y: 100,
+    opactiy: 0,
+    duration: 0.6,
+    stagger: 0.1,
+  });
+}
+function cursorAnimation() {
+  document.addEventListener("mousemove", function (event) {
+    gsap.to("#crsr", {
+      left: event.x,
+      top: event.y,
+    });
+  });
+
+  Shery.makeMagnet("#nav-part2 h4");
+}
 
 loadinganimation();
 cursorAnimation();
-
