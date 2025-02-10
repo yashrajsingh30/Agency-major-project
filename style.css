@@ -370,3 +370,79 @@ html, body{
     margin-top: 7vh;
     background-color: #ffffff8b;
 }
+
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding: 1px;
+}
+
+.marquee, .marquee2{
+    
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-top: 0.5vh;
+}  
+
+.marquee h1{
+    font-size: 14vh;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: marquee-anime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.marquee2 h1{
+    font-size: 14vh;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: marquee-anime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.marquee h1 span{
+    font-size: 14vh;
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.marquee2 h1 span{
+    font-size: 14vh;
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+@keyframes marquee-anime {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
