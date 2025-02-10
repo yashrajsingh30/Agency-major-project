@@ -203,15 +203,34 @@ html, body{
 
 
 #vid-container{
-    width:65%;
-    height:70vh;
+    width:70%;
+    height:80vh;
     /* background-color: red; */
     position: relative;
-    top:20%;
-    left: 35%;
+    top:10%;
+    left: 30%;
     background-image: url('./Showreel-2022-preview-1.jpg');
     background-size: cover;
 
+}
+
+
+#vid-cursor{
+    width: 13vw;
+    height:13vw;
+    background-color: #FFA63D;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top:-12%;
+    right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vid-cursor i{
+    scale: 3.5;
 }
 
 
