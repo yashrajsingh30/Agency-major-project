@@ -299,8 +299,10 @@ html, body{
 
 
 
+
+
 #flex-container{
-    width: 50%;
+    width: 55%;
     height: 80vh;
     /* background-color: aqua; */
     position: relative;
@@ -329,3 +331,42 @@ html, body{
     font-size: 2.5vh;
 }
 
+#blue-dev{
+    width: 40%;
+    height: 70vh;
+    background-color: #3F7DF4;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    margin-top: -25vh;
+    margin-left: 60%;
+    position: relative;
+}
+
+
+
+.blue-elem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2vh solid #fff;
+    padding-bottom: 4vh;
+    padding-top: 3vh;
+}
+.blue-elem h3{
+    font-size: 4vh;
+}
+
+.blue-elem h4{
+    font-size: 2vh;
+}
+
+
+#underline{
+    width: 68%;
+    height: 0.3vh;
+    position: relative;
+    left: 34%;
+    margin-top: 7vh;
+    background-color: #ffffff8b;
+}
