@@ -101,6 +101,10 @@ function loadinganimation() {
     duration: 0.6,
     stagger: 0.1,
   });
+  tl.from("#center1",{
+    opacity: 0,
+    duration: 2
+  },"-=1.3")
 }
 function cursorAnimation() {
   //   document.addEventListener("mousemove", function (event) {
@@ -149,6 +153,7 @@ function contentHover() {
   });
 }
 
+locomotiveScroll();
 loadinganimation();
 cursorAnimation();
 contentHover();
