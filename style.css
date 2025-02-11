@@ -171,9 +171,21 @@ html, body{
     width: 70%;
     margin-left: 28%;
     height: fit-content;
-    overflow: hidden;
+    overflow: hidden; 
     display: flex;
 }
+
+#center1::before{
+    content: '01';
+    position: absolute;
+    font-family: 'silk serif';
+    font-size: 6.5vh;
+    top: 29%;
+    left: 22%;
+    font-weight: 500;
+}
+
+
 
 .center h2{
     text-align: left;
@@ -182,7 +194,10 @@ html, body{
     text-transform: uppercase;
     font-weight: 400;
     z-index:0;
+    position: relative;
 }
+
+
 
 
 #hover1, #hover2{
@@ -282,6 +297,15 @@ html, body{
     padding-bottom: 4vh;
     border-bottom: 0.3vh solid #9b9090;
     text-transform: uppercase;
+}
+#page4-content h2::before{
+    content: '03';
+    position: absolute;
+    font-family: 'silk serif';
+    font-size: 8vh;
+    top: 7%;
+    left: -13%;
+    font-weight: 500;
 }
 
 
@@ -462,6 +486,16 @@ html, body{
     padding-bottom: 4vh;
     border-bottom: 0.3vh solid #9b9090;
     text-transform: uppercase;
+}
+
+#footer h1::before{
+    content: '04';
+    position: absolute;
+    font-family: 'silk serif';
+    font-size: 8vh;
+    top: 7%;
+    left: -13%;
+    font-weight: 500;
 }
 
 
