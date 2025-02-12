@@ -164,8 +164,8 @@ function sheryAnimation(){
 }
 
 
-locomotiveScroll();
 loadinganimation();
+locomotiveScroll();
 cursorAnimation();
 contentHover();
 sheryAnimation();
