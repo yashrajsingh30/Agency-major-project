@@ -235,7 +235,7 @@ html, body{
     position: relative;
     top:15%;
     left: 30%;
-    background-image: url('./Showreel-2022-preview-1.jpg');
+    background-image: url('./assets/photos/Showreel-2022-preview-1.jpg');
     background-size: cover;
     cursor: none;
 }
