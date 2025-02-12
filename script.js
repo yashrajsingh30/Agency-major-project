@@ -101,10 +101,14 @@ function loadinganimation() {
     duration: 0.6,
     stagger: 0.1,
   });
-  tl.from("#center1",{
-    opacity: 0,
-    duration: 1
-  },"-=1.3")
+  tl.from(
+    "#center1",
+    {
+      opacity: 0,
+      duration: 1,
+    },
+    "-=1.3"
+  );
 }
 function cursorAnimation() {
   //   document.addEventListener("mousemove", function (event) {
@@ -114,7 +118,61 @@ function cursorAnimation() {
   //     });
   //   });
 
+  // Shery.mouseFollower({
+  //   skew: true,
+  //   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  //   duration: 0,
+  // });
+
   Shery.makeMagnet("#nav-part2 h4");
+
+  var vidContainer = document.querySelector("#vid-container");
+  const cursor = document.querySelector("#vid-cursor");
+  const video = document.querySelector("#vid-container video");
+  vidContainer.addEventListener("mouseenter", function () {
+    vidContainer.addEventListener("mousemove", function (events) {
+      // gsap.to(cursor,{
+        //   left: events.offsetX+'px',
+        //   top:events.offsetY + 'px',
+        //   duration: 0
+        // })
+        cursor.style.left = events.offsetX + 'px';
+        cursor.style.top = events.offsetY + 'px';
+        cursor.style.transition= "";
+        
+      // console.log(events.offsetX + " " + events.offsetY)
+    });
+  });
+
+  vidContainer.addEventListener("mouseleave", function(){
+    cursor.style.left = "70%";
+    cursor.style.top = "-12%";
+    cursor.style.transition= "all ease 0.5s";
+
+
+  })
+  var flag=0;
+
+  vidContainer.addEventListener("click", function(){
+    if(flag==0){
+      video.play();
+      video.style.opacity = 1;
+      flag=1;
+      cursor.innerHTML = `<i class="ri-pause-fill"></i>`;
+      gsap.to("#vid-cursor",{
+        scale: 0.5
+      })
+    }
+    else{
+      flag=0;
+      video.pause();
+      video.style.opacity = 0;
+      cursor.innerHTML = `<i class="ri-play-fill"></i>`;
+      gsap.to("#vid-cursor",{
+        scale: 1
+      })
+    }
+  })
 }
 
 function contentHover() {
@@ -153,16 +211,44 @@ function contentHover() {
   });
 }
 
-function sheryAnimation(){
-  Shery.imageEffect(".images",{
+function sheryAnimation() {
+  Shery.imageEffect(".images", {
     style: 5,
     // debug:true,
-    config:{"a":{"value":2,"range":[0,30]},"b":{"value":0.75,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7944827418995247},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.31,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.35,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.35,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}},
-    gooey:true,
-    
-  })
+    config: {
+      a: { value: 2, range: [0, 30] },
+      b: { value: 0.75, range: [-1, 1] },
+      zindex: { value: -9996999, range: [-9999999, 9999999] },
+      aspect: { value: 0.7944827418995247 },
+      ignoreShapeAspect: { value: true },
+      shapePosition: { value: { x: 0, y: 0 } },
+      shapeScale: { value: { x: 0.5, y: 0.5 } },
+      shapeEdgeSoftness: { value: 0, range: [0, 0.5] },
+      shapeRadius: { value: 0, range: [0, 2] },
+      currentScroll: { value: 0 },
+      scrollLerp: { value: 0.07 },
+      gooey: { value: true },
+      infiniteGooey: { value: false },
+      growSize: { value: 4, range: [1, 15] },
+      durationOut: { value: 1, range: [0.1, 5] },
+      durationIn: { value: 1.5, range: [0.1, 5] },
+      displaceAmount: { value: 0.5 },
+      masker: { value: true },
+      maskVal: { value: 1.31, range: [1, 5] },
+      scrollType: { value: 0 },
+      geoVertex: { range: [1, 64], value: 1 },
+      noEffectGooey: { value: true },
+      onMouse: { value: 1 },
+      noise_speed: { value: 0.2, range: [0, 10] },
+      metaball: { value: 0.35, range: [0, 2] },
+      discard_threshold: { value: 0.5, range: [0, 1] },
+      antialias_threshold: { value: 0, range: [0, 0.1] },
+      noise_height: { value: 0.35, range: [0, 2] },
+      noise_scale: { value: 10, range: [0, 100] },
+    },
+    gooey: true,
+  });
 }
-
 
 loadinganimation();
 locomotiveScroll();
