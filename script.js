@@ -255,3 +255,21 @@ locomotiveScroll();
 cursorAnimation();
 contentHover();
 sheryAnimation();
+
+// function my(){
+  //   alert("Hey");
+// }
+// ScrollTrigger.create({
+//   trigger: "#page2",
+//   scroller: "#main",
+//   // markers: true,
+//   // top: "%"
+//   onEnter: cursorAnimation,
+// })
+
+
+// ScrollTrigger.create({
+//   trigger: "#page3",
+//   scroller: "#main",
+//   onEnter: sheryAnimation,
+// })
